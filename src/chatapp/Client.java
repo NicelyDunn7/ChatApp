@@ -3,7 +3,6 @@ package chatapp;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
-
 import org.json.JSONException;
 import org.json.JSONObject;;
 
@@ -21,11 +20,11 @@ public class Client {
 		
 		try {
 			clientSocket = new Socket("localhost", 10221);
-			JSONObject message = new JSONObject();
-			message.put("UserID", new String("14180221"));
-			message.put("message", input);
 			DataOutputStream outbound = new DataOutputStream(clientSocket.getOutputStream());
 			BufferedReader inbound = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+			JSONObject message = new JSONObject();
+			message.put("UserID", new String("Danny"));
+			message.put("message", input);
 			outbound.writeBytes(message.toString() + '\n');
 			response = inbound.readLine();
 			System.out.println(response);

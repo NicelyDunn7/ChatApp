@@ -1,7 +1,6 @@
 package chatapp;
 
 import java.util.Scanner;
-
 import org.json.JSONException;
 
 public class ChatApp {
@@ -26,7 +25,7 @@ public class ChatApp {
 			Server server = new Server();
 			server.run();
 		} else {
-			System.out.print("Error: Please Enter 1 or 2. Exiting Program.\n");
+			System.out.print("Error: Please Enter 1 or 2.\nExiting Program.\n");
 		}
 		scanner.close();
 	}
