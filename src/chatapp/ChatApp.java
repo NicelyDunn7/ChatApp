@@ -22,7 +22,7 @@ public class ChatApp {
 			Client client = new Client();
 			client.run();
 		} else if (choice == 2){
-			Server server = new Server();
+			Server server = new Server("users.txt");
 			server.run();
 		} else {
 			System.out.print("Error: Please Enter 1 or 2.\nExiting Program.\n");
